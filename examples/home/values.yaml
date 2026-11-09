@@ -1,0 +1,6 @@
+kustohelm:
+  overlay: ""
+kustomize:
+  images:
+  - name: nginx
+    newTag: stable

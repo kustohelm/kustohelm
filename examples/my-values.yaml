@@ -1,0 +1,15 @@
+kustohelm:
+  overlay: production
+kustomize:
+  replicas:
+  - name: home
+    count: 4
+  namePrefix: personal-
+  patches:
+  - target:
+      kind: Service
+      name: home
+    patch: |
+      - op: replace
+        path: /spec/ports/0/port
+        value: 8080

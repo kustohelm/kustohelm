@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "kustohelm": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "overlay": {
+          "enum": [
+            "",
+            "production"
+          ]
+        }
+      }
+    },
+    "kustomize": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "images": {
+          "type": "array"
+        },
+        "replicas": {
+          "type": "array"
+        },
+        "patches": {
+          "type": "array"
+        },
+        "labels": {
+          "type": "array"
+        },
+        "commonAnnotations": {
+          "type": "object"
+        },
+        "namePrefix": {
+          "type": "string"
+        },
+        "nameSuffix": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

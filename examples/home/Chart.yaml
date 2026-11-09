@@ -1,0 +1,9 @@
+apiVersion: v2
+name: home
+version: 0.1.0
+type: application
+render:
+  engine: kustomize
+  path: base
+  overlays:
+    production: overlays/production
